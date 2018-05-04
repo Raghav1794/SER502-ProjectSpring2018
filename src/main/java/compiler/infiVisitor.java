@@ -1,90 +1,90 @@
-package compiler;// Generated from /Users/Pramod/Documents/SER502--Spring2017-Team2/src/infinity.g4 by ANTLR 4.7
+package compiler;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
  * This interface defines a complete generic visitor for a parse tree produced
- * by {@link infinityParser}.
+ * by {@link infiParser}.
  *
  * @param <T> The return type of the visit operation. Use {@link Void} for
  * operations with no return type.
  */
-public interface infinityVisitor<T> extends ParseTreeVisitor<T> {
+public interface infiVisitor<T> extends ParseTreeVisitor<T> {
 	/**
-	 * Visit a parse tree produced by {@link infinityParser#program}.
+	 * Visit a parse tree produced by {@link infiParser#program}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitProgram(infinityParser.ProgramContext ctx);
+	T visitProgram(infiParser.ProgramContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link infinityParser#statement}.
+	 * Visit a parse tree produced by {@link infiParser#statement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitStatement(infinityParser.StatementContext ctx);
+	T visitStatement(infiParser.StatementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link infinityParser#assignment}.
+	 * Visit a parse tree produced by {@link infiParser#assignment}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAssignment(infinityParser.AssignmentContext ctx);
+	T visitAssignment(infiParser.AssignmentContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link infinityParser#equality}.
+	 * Visit a parse tree produced by {@link infiParser#equality}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitEquality(infinityParser.EqualityContext ctx);
+	T visitEquality(infiParser.EqualityContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link infinityParser#loop}.
+	 * Visit a parse tree produced by {@link infiParser#loop}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLoop(infinityParser.LoopContext ctx);
+	T visitLoop(infiParser.LoopContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link infinityParser#variable}.
+	 * Visit a parse tree produced by {@link infiParser#variable}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitVariable(infinityParser.VariableContext ctx);
+	T visitVariable(infiParser.VariableContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link infinityParser#condition}.
+	 * Visit a parse tree produced by {@link infiParser#condition}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCondition(infinityParser.ConditionContext ctx);
+	T visitCondition(infiParser.ConditionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link infinityParser#ifcondition}.
+	 * Visit a parse tree produced by {@link infiParser#ifcondition}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitIfcondition(infinityParser.IfconditionContext ctx);
+	T visitIfcondition(infiParser.IfconditionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link infinityParser#elsecondition}.
+	 * Visit a parse tree produced by {@link infiParser#elsecondition}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitElsecondition(infinityParser.ElseconditionContext ctx);
+	T visitElsecondition(infiParser.ElseconditionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link infinityParser#display}.
+	 * Visit a parse tree produced by {@link infiParser#display}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitDisplay(infinityParser.DisplayContext ctx);
+	T visitDisplay(infiParser.DisplayContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link infinityParser#read}.
+	 * Visit a parse tree produced by {@link infiParser#read}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitRead(infinityParser.ReadContext ctx);
+	T visitRead(infiParser.ReadContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link infinityParser#expression}.
+	 * Visit a parse tree produced by {@link infiParser#expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitExpression(infinityParser.ExpressionContext ctx);
+	T visitExpression(infiParser.ExpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link infinityParser#string}.
+	 * Visit a parse tree produced by {@link infiParser#string}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitString(infinityParser.StringContext ctx);
+	T visitString(infiParser.StringContext ctx);
 }
