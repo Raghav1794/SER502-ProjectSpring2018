@@ -1,139 +1,139 @@
-package compiler;// Generated from /Users/Pramod/Documents/SER502--Spring2017-Team2/src/infinity.g4 by ANTLR 4.7
+package compiler;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
  * This interface defines a complete listener for a parse tree produced by
- * {@link infinityParser}.
+ * {@link infiParser}.
  */
-public interface infinityListener extends ParseTreeListener {
+public interface infiListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link infinityParser#program}.
+	 * Enter a parse tree produced by {@link infiParser#program}.
 	 * @param ctx the parse tree
 	 */
-	void enterProgram(infinityParser.ProgramContext ctx);
+	void enterProgram(infiParser.ProgramContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link infinityParser#program}.
+	 * Exit a parse tree produced by {@link infiParser#program}.
 	 * @param ctx the parse tree
 	 */
-	void exitProgram(infinityParser.ProgramContext ctx);
+	void exitProgram(infiParser.ProgramContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link infinityParser#statement}.
+	 * Enter a parse tree produced by {@link infiParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterStatement(infinityParser.StatementContext ctx);
+	void enterStatement(infiParser.StatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link infinityParser#statement}.
+	 * Exit a parse tree produced by {@link infiParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitStatement(infinityParser.StatementContext ctx);
+	void exitStatement(infiParser.StatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link infinityParser#assignment}.
+	 * Enter a parse tree produced by {@link infiParser#assignment}.
 	 * @param ctx the parse tree
 	 */
-	void enterAssignment(infinityParser.AssignmentContext ctx);
+	void enterAssignment(infiParser.AssignmentContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link infinityParser#assignment}.
+	 * Exit a parse tree produced by {@link infiParser#assignment}.
 	 * @param ctx the parse tree
 	 */
-	void exitAssignment(infinityParser.AssignmentContext ctx);
+	void exitAssignment(infiParser.AssignmentContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link infinityParser#equality}.
+	 * Enter a parse tree produced by {@link infiParser#equality}.
 	 * @param ctx the parse tree
 	 */
-	void enterEquality(infinityParser.EqualityContext ctx);
+	void enterEquality(infiParser.EqualityContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link infinityParser#equality}.
+	 * Exit a parse tree produced by {@link infiParser#equality}.
 	 * @param ctx the parse tree
 	 */
-	void exitEquality(infinityParser.EqualityContext ctx);
+	void exitEquality(infiParser.EqualityContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link infinityParser#loop}.
+	 * Enter a parse tree produced by {@link infiParser#loop}.
 	 * @param ctx the parse tree
 	 */
-	void enterLoop(infinityParser.LoopContext ctx);
+	void enterLoop(infiParser.LoopContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link infinityParser#loop}.
+	 * Exit a parse tree produced by {@link infiParser#loop}.
 	 * @param ctx the parse tree
 	 */
-	void exitLoop(infinityParser.LoopContext ctx);
+	void exitLoop(infiParser.LoopContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link infinityParser#variable}.
+	 * Enter a parse tree produced by {@link infiParser#variable}.
 	 * @param ctx the parse tree
 	 */
-	void enterVariable(infinityParser.VariableContext ctx);
+	void enterVariable(infiParser.VariableContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link infinityParser#variable}.
+	 * Exit a parse tree produced by {@link infiParser#variable}.
 	 * @param ctx the parse tree
 	 */
-	void exitVariable(infinityParser.VariableContext ctx);
+	void exitVariable(infiParser.VariableContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link infinityParser#condition}.
+	 * Enter a parse tree produced by {@link infiParser#condition}.
 	 * @param ctx the parse tree
 	 */
-	void enterCondition(infinityParser.ConditionContext ctx);
+	void enterCondition(infiParser.ConditionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link infinityParser#condition}.
+	 * Exit a parse tree produced by {@link infiParser#condition}.
 	 * @param ctx the parse tree
 	 */
-	void exitCondition(infinityParser.ConditionContext ctx);
+	void exitCondition(infiParser.ConditionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link infinityParser#ifcondition}.
+	 * Enter a parse tree produced by {@link infiParser#ifcondition}.
 	 * @param ctx the parse tree
 	 */
-	void enterIfcondition(infinityParser.IfconditionContext ctx);
+	void enterIfcondition(infiParser.IfconditionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link infinityParser#ifcondition}.
+	 * Exit a parse tree produced by {@link infiParser#ifcondition}.
 	 * @param ctx the parse tree
 	 */
-	void exitIfcondition(infinityParser.IfconditionContext ctx);
+	void exitIfcondition(infiParser.IfconditionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link infinityParser#elsecondition}.
+	 * Enter a parse tree produced by {@link infiParser#elsecondition}.
 	 * @param ctx the parse tree
 	 */
-	void enterElsecondition(infinityParser.ElseconditionContext ctx);
+	void enterElsecondition(infiParser.ElseconditionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link infinityParser#elsecondition}.
+	 * Exit a parse tree produced by {@link infiParser#elsecondition}.
 	 * @param ctx the parse tree
 	 */
-	void exitElsecondition(infinityParser.ElseconditionContext ctx);
+	void exitElsecondition(infiParser.ElseconditionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link infinityParser#display}.
+	 * Enter a parse tree produced by {@link infiParser#display}.
 	 * @param ctx the parse tree
 	 */
-	void enterDisplay(infinityParser.DisplayContext ctx);
+	void enterDisplay(infiParser.DisplayContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link infinityParser#display}.
+	 * Exit a parse tree produced by {@link infiParser#display}.
 	 * @param ctx the parse tree
 	 */
-	void exitDisplay(infinityParser.DisplayContext ctx);
+	void exitDisplay(infiParser.DisplayContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link infinityParser#read}.
+	 * Enter a parse tree produced by {@link infiParser#read}.
 	 * @param ctx the parse tree
 	 */
-	void enterRead(infinityParser.ReadContext ctx);
+	void enterRead(infiParser.ReadContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link infinityParser#read}.
+	 * Exit a parse tree produced by {@link infiParser#read}.
 	 * @param ctx the parse tree
 	 */
-	void exitRead(infinityParser.ReadContext ctx);
+	void exitRead(infiParser.ReadContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link infinityParser#expression}.
+	 * Enter a parse tree produced by {@link infiParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpression(infinityParser.ExpressionContext ctx);
+	void enterExpression(infiParser.ExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link infinityParser#expression}.
+	 * Exit a parse tree produced by {@link infiParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpression(infinityParser.ExpressionContext ctx);
+	void exitExpression(infiParser.ExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link infinityParser#string}.
+	 * Enter a parse tree produced by {@link infiParser#string}.
 	 * @param ctx the parse tree
 	 */
-	void enterString(infinityParser.StringContext ctx);
+	void enterString(infiParser.StringContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link infinityParser#string}.
+	 * Exit a parse tree produced by {@link infiParser#string}.
 	 * @param ctx the parse tree
 	 */
-	void exitString(infinityParser.StringContext ctx);
+	void exitString(infiParser.StringContext ctx);
 }
