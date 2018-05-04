@@ -22,7 +22,7 @@ installing, building  Infinity (compiler/runtime).
 Downloading the sources for Infinity:
 
 ```
- $ git clone https://github.com/dixithk/SER502--Spring2017-Team2
+ $ git clone https://github.com/Raghav1794/SER502-ProjectSpring2018.git
  $ cd SER502-ProjectSpring2018
 ```
 
@@ -44,10 +44,6 @@ Project Structure:
   │   ├── pattern.inf.byte
   │   ├── scanAndPrintCheck.inf
   │   └── swapTwoNumbers
-  ├── doc
-  │   ├── MileStone1.pdf
-  │   ├── MileStone2.pdf
-  │   └── syntax_diagrams
   ├── gradlew
   ├── gradlew.bat
   ├── parseTree
@@ -124,18 +120,13 @@ use the following script
 $ ./gradlew  build executeWithAbsolutePath -Pfile=<filenameCompletePath>
 ```
 
-for example:
-```
-$ ./gradlew clean build executeWithAbsolutePath -Pfile=/home/dixith/Documents/SER-502/project/SER502--Spring2017-Team2/data/factorial.inf
-
-```
 
 **Windows based system**
 
 Similar to Linux but no ./ infront of gradlew
 
 ```
- > cd SER502--Spring2017-Team2
+ > cd SER502-ProjectSpring2018
  > gradlew build run -Pfile=factorial.inf
 
 ```
