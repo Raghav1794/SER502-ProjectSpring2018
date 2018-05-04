@@ -1,4 +1,4 @@
-package compiler;// Generated from /Users/Pramod/Documents/SER502--Spring2017-Team2/src/infinity.g4 by ANTLR 4.7
+package compiler;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -9,7 +9,7 @@ import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
-public class infinityLexer extends Lexer {
+public class infiLexer extends Lexer {
 	static { RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -81,13 +81,13 @@ public class infinityLexer extends Lexer {
 	}
 
 
-	public infinityLexer(CharStream input) {
+	public infiLexer(CharStream input) {
 		super(input);
 		_interp = new LexerATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
 	@Override
-	public String getGrammarFileName() { return "infinity.g4"; }
+	public String getGrammarFileName() { return "infi.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
