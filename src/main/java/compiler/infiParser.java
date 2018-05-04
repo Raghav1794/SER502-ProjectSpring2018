@@ -1,4 +1,4 @@
-package compiler;// Generated from /Users/Pramod/Documents/SER502--Spring2017-Team2/src/infinity.g4 by ANTLR 4.7
+package compiler;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
-public class infinityParser extends Parser {
+public class infiParser extends Parser {
 	static { RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -77,7 +77,7 @@ public class infinityParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "infinity.g4"; }
+	public String getGrammarFileName() { return "infi.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -88,7 +88,7 @@ public class infinityParser extends Parser {
 	@Override
 	public ATN getATN() { return _ATN; }
 
-	public infinityParser(TokenStream input) {
+	public infiParser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
@@ -105,15 +105,15 @@ public class infinityParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_program; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).enterProgram(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).enterProgram(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).exitProgram(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).exitProgram(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof infinityVisitor ) return ((infinityVisitor<? extends T>)visitor).visitProgram(this);
+			if ( visitor instanceof infiVisitor ) return ((infiVisitor<? extends T>)visitor).visitProgram(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -177,15 +177,15 @@ public class infinityParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_statement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).enterStatement(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).enterStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).exitStatement(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).exitStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof infinityVisitor ) return ((infinityVisitor<? extends T>)visitor).visitStatement(this);
+			if ( visitor instanceof infiVisitor ) return ((infiVisitor<? extends T>)visitor).visitStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -252,27 +252,27 @@ public class infinityParser extends Parser {
 	}
 
 	public static class AssignmentContext extends ParserRuleContext {
-		public TerminalNode IDENTIFIER() { return getToken(infinityParser.IDENTIFIER, 0); }
-		public TerminalNode ASSIGN() { return getToken(infinityParser.ASSIGN, 0); }
+		public TerminalNode IDENTIFIER() { return getToken(infiParser.IDENTIFIER, 0); }
+		public TerminalNode ASSIGN() { return getToken(infiParser.ASSIGN, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public TerminalNode CHARACTER() { return getToken(infinityParser.CHARACTER, 0); }
+		public TerminalNode CHARACTER() { return getToken(infiParser.CHARACTER, 0); }
 		public AssignmentContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_assignment; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).enterAssignment(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).enterAssignment(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).exitAssignment(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).exitAssignment(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof infinityVisitor ) return ((infinityVisitor<? extends T>)visitor).visitAssignment(this);
+			if ( visitor instanceof infiVisitor ) return ((infiVisitor<? extends T>)visitor).visitAssignment(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -331,28 +331,28 @@ public class infinityParser extends Parser {
 		public ExpressionContext expression(int i) {
 			return getRuleContext(ExpressionContext.class,i);
 		}
-		public TerminalNode GT() { return getToken(infinityParser.GT, 0); }
-		public TerminalNode LT() { return getToken(infinityParser.LT, 0); }
-		public TerminalNode LE() { return getToken(infinityParser.LE, 0); }
-		public TerminalNode EQ() { return getToken(infinityParser.EQ, 0); }
-		public TerminalNode NE() { return getToken(infinityParser.NE, 0); }
-		public TerminalNode GE() { return getToken(infinityParser.GE, 0); }
-		public TerminalNode IDENTIFIER() { return getToken(infinityParser.IDENTIFIER, 0); }
+		public TerminalNode GT() { return getToken(infiParser.GT, 0); }
+		public TerminalNode LT() { return getToken(infiParser.LT, 0); }
+		public TerminalNode LE() { return getToken(infiParser.LE, 0); }
+		public TerminalNode EQ() { return getToken(infiParser.EQ, 0); }
+		public TerminalNode NE() { return getToken(infiParser.NE, 0); }
+		public TerminalNode GE() { return getToken(infiParser.GE, 0); }
+		public TerminalNode IDENTIFIER() { return getToken(infiParser.IDENTIFIER, 0); }
 		public EqualityContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_equality; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).enterEquality(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).enterEquality(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).exitEquality(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).exitEquality(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof infinityVisitor ) return ((infinityVisitor<? extends T>)visitor).visitEquality(this);
+			if ( visitor instanceof infiVisitor ) return ((infiVisitor<? extends T>)visitor).visitEquality(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -421,15 +421,15 @@ public class infinityParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_loop; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).enterLoop(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).enterLoop(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).exitLoop(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).exitLoop(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof infinityVisitor ) return ((infinityVisitor<? extends T>)visitor).visitLoop(this);
+			if ( visitor instanceof infiVisitor ) return ((infiVisitor<? extends T>)visitor).visitLoop(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -481,8 +481,8 @@ public class infinityParser extends Parser {
 	}
 
 	public static class VariableContext extends ParserRuleContext {
-		public TerminalNode IDENTIFIER() { return getToken(infinityParser.IDENTIFIER, 0); }
-		public TerminalNode ASSIGN() { return getToken(infinityParser.ASSIGN, 0); }
+		public TerminalNode IDENTIFIER() { return getToken(infiParser.IDENTIFIER, 0); }
+		public TerminalNode ASSIGN() { return getToken(infiParser.ASSIGN, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
@@ -492,15 +492,15 @@ public class infinityParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_variable; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).enterVariable(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).enterVariable(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).exitVariable(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).exitVariable(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof infinityVisitor ) return ((infinityVisitor<? extends T>)visitor).visitVariable(this);
+			if ( visitor instanceof infiVisitor ) return ((infiVisitor<? extends T>)visitor).visitVariable(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -560,15 +560,15 @@ public class infinityParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_condition; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).enterCondition(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).enterCondition(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).exitCondition(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).exitCondition(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof infinityVisitor ) return ((infinityVisitor<? extends T>)visitor).visitCondition(this);
+			if ( visitor instanceof infiVisitor ) return ((infiVisitor<? extends T>)visitor).visitCondition(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -621,15 +621,15 @@ public class infinityParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_ifcondition; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).enterIfcondition(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).enterIfcondition(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).exitIfcondition(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).exitIfcondition(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof infinityVisitor ) return ((infinityVisitor<? extends T>)visitor).visitIfcondition(this);
+			if ( visitor instanceof infiVisitor ) return ((infiVisitor<? extends T>)visitor).visitIfcondition(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -693,15 +693,15 @@ public class infinityParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_elsecondition; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).enterElsecondition(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).enterElsecondition(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).exitElsecondition(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).exitElsecondition(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof infinityVisitor ) return ((infinityVisitor<? extends T>)visitor).visitElsecondition(this);
+			if ( visitor instanceof infiVisitor ) return ((infiVisitor<? extends T>)visitor).visitElsecondition(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -747,7 +747,7 @@ public class infinityParser extends Parser {
 	}
 
 	public static class DisplayContext extends ParserRuleContext {
-		public TerminalNode IDENTIFIER() { return getToken(infinityParser.IDENTIFIER, 0); }
+		public TerminalNode IDENTIFIER() { return getToken(infiParser.IDENTIFIER, 0); }
 		public StringContext string() {
 			return getRuleContext(StringContext.class,0);
 		}
@@ -757,15 +757,15 @@ public class infinityParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_display; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).enterDisplay(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).enterDisplay(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).exitDisplay(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).exitDisplay(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof infinityVisitor ) return ((infinityVisitor<? extends T>)visitor).visitDisplay(this);
+			if ( visitor instanceof infiVisitor ) return ((infiVisitor<? extends T>)visitor).visitDisplay(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -816,22 +816,22 @@ public class infinityParser extends Parser {
 	}
 
 	public static class ReadContext extends ParserRuleContext {
-		public TerminalNode IDENTIFIER() { return getToken(infinityParser.IDENTIFIER, 0); }
+		public TerminalNode IDENTIFIER() { return getToken(infiParser.IDENTIFIER, 0); }
 		public ReadContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_read; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).enterRead(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).enterRead(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).exitRead(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).exitRead(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof infinityVisitor ) return ((infinityVisitor<? extends T>)visitor).visitRead(this);
+			if ( visitor instanceof infiVisitor ) return ((infiVisitor<? extends T>)visitor).visitRead(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -862,38 +862,38 @@ public class infinityParser extends Parser {
 	}
 
 	public static class ExpressionContext extends ParserRuleContext {
-		public TerminalNode NOT() { return getToken(infinityParser.NOT, 0); }
+		public TerminalNode NOT() { return getToken(infiParser.NOT, 0); }
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
 		}
 		public ExpressionContext expression(int i) {
 			return getRuleContext(ExpressionContext.class,i);
 		}
-		public TerminalNode INTEGER() { return getToken(infinityParser.INTEGER, 0); }
-		public TerminalNode IDENTIFIER() { return getToken(infinityParser.IDENTIFIER, 0); }
-		public TerminalNode BOOL() { return getToken(infinityParser.BOOL, 0); }
-		public TerminalNode MUL() { return getToken(infinityParser.MUL, 0); }
-		public TerminalNode DIV() { return getToken(infinityParser.DIV, 0); }
-		public TerminalNode MOD() { return getToken(infinityParser.MOD, 0); }
-		public TerminalNode ADD() { return getToken(infinityParser.ADD, 0); }
-		public TerminalNode SUB() { return getToken(infinityParser.SUB, 0); }
-		public TerminalNode AND() { return getToken(infinityParser.AND, 0); }
-		public TerminalNode OR() { return getToken(infinityParser.OR, 0); }
+		public TerminalNode INTEGER() { return getToken(infiParser.INTEGER, 0); }
+		public TerminalNode IDENTIFIER() { return getToken(infiParser.IDENTIFIER, 0); }
+		public TerminalNode BOOL() { return getToken(infiParser.BOOL, 0); }
+		public TerminalNode MUL() { return getToken(infiParser.MUL, 0); }
+		public TerminalNode DIV() { return getToken(infiParser.DIV, 0); }
+		public TerminalNode MOD() { return getToken(infiParser.MOD, 0); }
+		public TerminalNode ADD() { return getToken(infiParser.ADD, 0); }
+		public TerminalNode SUB() { return getToken(infiParser.SUB, 0); }
+		public TerminalNode AND() { return getToken(infiParser.AND, 0); }
+		public TerminalNode OR() { return getToken(infiParser.OR, 0); }
 		public ExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_expression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).enterExpression(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).enterExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).exitExpression(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).exitExpression(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof infinityVisitor ) return ((infinityVisitor<? extends T>)visitor).visitExpression(this);
+			if ( visitor instanceof infiVisitor ) return ((infiVisitor<? extends T>)visitor).visitExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1067,22 +1067,22 @@ public class infinityParser extends Parser {
 	}
 
 	public static class StringContext extends ParserRuleContext {
-		public TerminalNode IDENTIFIER() { return getToken(infinityParser.IDENTIFIER, 0); }
+		public TerminalNode IDENTIFIER() { return getToken(infiParser.IDENTIFIER, 0); }
 		public StringContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_string; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).enterString(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).enterString(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof infinityListener ) ((infinityListener)listener).exitString(this);
+			if ( listener instanceof infiListener ) ((infiListener)listener).exitString(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof infinityVisitor ) return ((infinityVisitor<? extends T>)visitor).visitString(this);
+			if ( visitor instanceof infiVisitor ) return ((infiVisitor<? extends T>)visitor).visitString(this);
 			else return visitor.visitChildren(this);
 		}
 	}
