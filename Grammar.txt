@@ -1,3 +1,9 @@
+Grammar:
+This design document is to explain the grammar and parser used for a new simple language
+called Infi. This language is designed to illustrate the semantic features of many high level
+languages.
+An EBNF grammar for Infi Language is shown below:
+
 <program> ::= {<statement>,<space>};
 
 <statement> ::= <assignment>|<condition>|<loop>|<variable>;
