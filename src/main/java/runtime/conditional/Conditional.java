@@ -3,9 +3,6 @@ package runtime.conditional;
 
 import static runtime.constants.Constants.*;
 
-/**
- * Created by dixith on 4/23/17.
- */
 public abstract class Conditional {
 
     public int operand2;
