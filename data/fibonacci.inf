@@ -1,0 +1,12 @@
+int(a) = 0;
+int(b) = 1;
+int(n) = 100;
+int(nextTerm) =0;
+
+
+while(nextTerm <= n) {
+    print nextTerm;
+    a = b;
+    b = nextTerm;
+    nextTerm = a+b;
+}

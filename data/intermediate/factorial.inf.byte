@@ -1,0 +1,25 @@
+1. Factorial Byte Code
+
+PUSH 5
+STORE x
+PUSH 1
+STORE fact
+PUSH x
+PUSH 1
+GREATER
+TESTFGOTO 19
+PUSH fact
+PUSH x
+MUL
+STORE fact
+PUSH x
+PUSH 1
+SUB
+STORE x
+PUSH True
+TESTTGOTO 5
+PUSH fact
+PRINT
+END
+
+

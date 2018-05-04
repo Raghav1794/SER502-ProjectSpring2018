@@ -1,0 +1,14 @@
+int(i) = 1;
+int(j) = 0;
+int(rows) = 5;
+int(k) = 1;
+
+while(i <= rows) {
+    j = 1;
+    while(j<=i) {
+        print (a);
+        j = j+1;
+    }
+    print (newLine);
+    i = i +1;
+}

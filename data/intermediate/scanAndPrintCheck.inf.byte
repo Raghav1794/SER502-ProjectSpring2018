@@ -1,0 +1,7 @@
+READ
+STORE a
+PUSH a
+PRINT
+PUSH $helloworld
+PRINT
+END
