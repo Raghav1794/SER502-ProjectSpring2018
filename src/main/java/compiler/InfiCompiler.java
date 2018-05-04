@@ -10,16 +10,16 @@ import java.io.FileInputStream;
 import java.io.PrintWriter;
 
 
-public class InfinityCompiler {
+public class infiCompiler {
     public static void main(String[] args) throws Exception {
         FileInputStream fis = new FileInputStream(args[0]);
         ANTLRInputStream input = new ANTLRInputStream(fis);
 
-        infinityLexer lexer = new infinityLexer(input);
+        infiLexer lexer = new infiLexer(input);
 
         CommonTokenStream tokens = new CommonTokenStream(lexer);
 
-        infinityParser parser = new infinityParser(tokens);
+        infiParser parser = new infiParser(tokens);
         ParserRuleContext tree = parser.program();
 
         /*Duplicate code just to showcase the compiler without Runtime*/
@@ -33,7 +33,7 @@ public class InfinityCompiler {
             System.out.println("Unable to create parseTree " + e.getMessage());
         }
         ParseTreeWalker walker = new ParseTreeWalker();
-        infinityBaseListener extractor = new infinityBaseListener();
+        infiBaseListener extractor = new infiBaseListener();
         walker.walk(extractor, tree);
         try {
             PrintWriter writer = new PrintWriter(args[0] + ".byte", "UTF-8");
@@ -46,3 +46,4 @@ public class InfinityCompiler {
         }
     }
 }
+
