@@ -17,9 +17,9 @@
 ##### Directions/instructions to build and run your language (compiler/runtime).
 
 We are using [gradle](https://gradle.org/), as far the best build system for the JVM automation  for 
-installing, building  Infinity (compiler/runtime).
+installing, building  infi (compiler/runtime).
 
-Downloading the sources for Infinity:
+Downloading the sources for infi:
 
 ```
  $ git clone https://github.com/Raghav1794/SER502-ProjectSpring2018.git
@@ -28,7 +28,7 @@ Downloading the sources for Infinity:
 
 Project Structure:
 
-**Place the Infinity code to run in **data** folder of project:**
+**Place the infi code to run in **data** folder of project:**
 ```
 
   ├── build.gradle
@@ -37,11 +37,8 @@ Project Structure:
   │   ├── factorial.inf
   │   ├── fibonacci.inf
   │   ├── gcd.inf
-  │   ├── Ifcheck.inf
   │   ├── intermediate
   │   │   └── gcd.inf.byte
-  │   ├── pattern.inf
-  │   ├── pattern.inf.byte
   │   ├── scanAndPrintCheck.inf
   │   └── swapTwoNumbers
   ├── gradlew
@@ -53,16 +50,16 @@ Project Structure:
       └── main
           └── java
               ├── compiler
-              │   ├── infinityBaseListener.java
-              │   ├── infinityBaseVisitor.java
-              │   ├── infinity.g4
-              │   ├── infinityLexer.java
-              │   ├── infinityLexer.tokens
-              │   ├── infinityListener.java
-              │   ├── infinityParser.java
-              │   ├── infinityRunner.java
-              │   ├── infinity.tokens
-              │   └── infinityVisitor.java
+              │   ├── infiBaseListener.java
+              │   ├── infiBaseVisitor.java
+              │   ├── infi.g4
+              │   ├── infiLexer.java
+              │   ├── infiLexer.tokens
+              │   ├── infiListener.java
+              │   ├── infiParser.java
+              │   ├── infiRunner.java
+              │   ├── infi.tokens
+              │   └── infiVisitor.java
               └── runtime
                   ├── Arithmetic
                   │   ├── Add.java
@@ -145,7 +142,7 @@ Assumption: the code is expected to be in data folder of the project
 
 To generate only a intermediate code representation, you can use the following gradle task:
 ```
- $ ./gradlew build executeCompiler -PInfFileName=<InfinityFileName>
+ $ ./gradlew build executeCompiler -PInfFileName=<infiFileName>
 ```
 
 For example:
@@ -155,10 +152,10 @@ $ ./gradlew build executeCompiler -PInfFileName=pattern.inf
 
 ```
 
-To run the bytecode using Infinity run time use the following gradle task:
+To run the bytecode using infi run time use the following gradle task:
 
 ```
-$ ./gradlew build executeRuntime -PInfFileName=<ByteCodeOfInifnity>
+$ ./gradlew build executeRuntime -PInfFileName=<ByteCodeOfInfi>
 ```
 
 for example:
