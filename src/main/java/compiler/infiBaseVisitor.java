@@ -1,104 +1,104 @@
-package compiler;// Generated from /Users/Pramod/Documents/SER502--Spring2017-Team2/src/infinity.g4 by ANTLR 4.7
+package compiler;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
- * This class provides an empty implementation of {@link infinityVisitor},
+ * This class provides an empty implementation of {@link infiVisitor},
  * which can be extended to create a visitor which only needs to handle a subset
  * of the available methods.
  *
  * @param <T> The return type of the visit operation. Use {@link Void} for
  * operations with no return type.
  */
-public class infinityBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements infinityVisitor<T> {
+public class infiBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements infiVisitor<T> {
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitProgram(infinityParser.ProgramContext ctx) { return visitChildren(ctx); }
+	@Override public T visitProgram(infiParser.ProgramContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStatement(infinityParser.StatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStatement(infiParser.StatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAssignment(infinityParser.AssignmentContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAssignment(infiParser.AssignmentContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEquality(infinityParser.EqualityContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEquality(infiParser.EqualityContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLoop(infinityParser.LoopContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLoop(infiParser.LoopContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitVariable(infinityParser.VariableContext ctx) { return visitChildren(ctx); }
+	@Override public T visitVariable(infiParser.VariableContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitCondition(infinityParser.ConditionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCondition(infiParser.ConditionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitIfcondition(infinityParser.IfconditionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitIfcondition(infiParser.IfconditionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitElsecondition(infinityParser.ElseconditionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitElsecondition(infiParser.ElseconditionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDisplay(infinityParser.DisplayContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDisplay(infiParser.DisplayContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitRead(infinityParser.ReadContext ctx) { return visitChildren(ctx); }
+	@Override public T visitRead(infiParser.ReadContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExpression(infinityParser.ExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExpression(infiParser.ExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitString(infinityParser.StringContext ctx) { return visitChildren(ctx); }
+	@Override public T visitString(infiParser.StringContext ctx) { return visitChildren(ctx); }
 }
