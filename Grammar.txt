@@ -1,0 +1,53 @@
+<program> ::= {<statement>,<space>};
+
+<statement> ::= <assignment>|<condition>|<loop>|<variable>;
+
+<assignment> ::=
+                <identifier>,”=“,(<expression>|”’”,<character>,”’”|’”’,<character>,’”’|”’”
+                ,<string>,”’”|’”’,<string>,’”’|<boolean>|<constant>),”;”;
+
+<condition> ::=
+               "if”,”(“,<equality>,”)”,”{“,<statement>,{<space>,<statement>},”}”,{“elif”,
+               ”(“,<equality>,”)”,”{”,<statement>,{<space>,<statement>},”}”},
+               ["else”,”{“,<statement>,{<space>,<statement>},”};
+
+<equality> ::= <expression>,(“>”|”<“|”<=“|”>=“|”==“|”!=“),<expression>;
+
+<loop> ::= “while”,“(”,<equality>,“)”,”{”,<statement>,{<space>,<statement>},”}”;
+
+<expression> ::= <expression>,”+”,<term>|<expression>,”-“,<term>|<term>;
+
+<term> ::= <term>,”*”,<factor>|<factor>;
+
+<factor> ::= <factor>,”/“,<factor1>|<factor1>;
+
+<factor1> ::= “(”,<expression>,”)”|<number>;
+
+<boolean> ::= <term1>,{”||”,<term1>}|<term1>;
+
+<term1> ::= <factor1>,{”&&”,<factor1>}|<factor1>;
+
+<factor1> ::= <constant>|”!”,<factor1>;
+
+<constant> ::= “true”|“false”;
+
+<character> ::= <letter>|<digit>|<symbol>;
+
+<identifier> ::= <letter>,{<letter>|<digit>|<symbol>};
+
+<number> ::= [-],<digit>,{<digit>};
+
+<string> ::= <character>,{<character>};
+
+<letter> ::=
+      “A”|”B”|”C”|”D”|”E”|”F”|”G”|"H"|"I"|"J"|"K"|"L"|"M"|"N"|"O"|"P"|"Q"|"R"|"S
+      "|"T"|"U"|"V"|"W"|“X”|”Y”|”Z”|”a”|”b”|”c”|”d”|”e”|”f”|”g”|”h”|”i”|”j”|”k”|
+      ”l”|”m”|”n”|”o”|”p”|”q”|”r”|”s”|”t”|”u”|”v”|”w”|”x”|”y”|”z”;
+
+<digit> ::= "0"|"1"|”2”|”3”|“4”|”5”|”6”|”7”|”8”|”9”;
+
+<symbol> ::= "["|"]"|"{"|"}"|"("|")"|"<"|">"|"'"|'"'|"="|"|"|"."|","|";"|"_";
+
+<space> ::= ? US-ASCII character 32 ?;
+
+<variable> ::= “int”,<space>,<identifier>,”=”,<number>,”;”;
