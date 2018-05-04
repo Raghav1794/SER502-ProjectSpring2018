@@ -1,6 +1,4 @@
-//grammer for infinity inspired from C language.
-
-grammar infinity
+grammar infi
         ;
 
 //program is a list of statements.
