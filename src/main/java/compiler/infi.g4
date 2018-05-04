@@ -1,3 +1,4 @@
+//The following is the grammar in Antlr compatible format:
 grammar infi
         ;
 
