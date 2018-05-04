@@ -28,8 +28,8 @@ public class Loader {
     }
 
     public static void main(String[] args) {
-        Loader infinityLoader = new Loader();
-        infinityLoader.run(args[0]);
+        Loader infiLoader = new Loader();
+        infiLoader.run(args[0]);
     }
 
 }
