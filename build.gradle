@@ -1,0 +1,53 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'application'
+apply plugin: 'antlr'
+
+repositories {
+    mavenCentral()
+}
+
+mainClassName = "compiler/infinityRunner"
+
+dependencies {
+    compile group: 'org.antlr', name: 'antlr4', version: '4.7'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
+
+run {
+    if (project.hasProperty("file")) {
+        args = ["data/$file"]
+    }
+    standardInput = System.in
+}
+
+task( executeWithAbsolutePath, dependsOn: jar, type: JavaExec ) {
+    if (project.hasProperty("file")) {
+        args = ["$file"]
+    }
+    main =  'compiler.infinityRunner'
+    classpath = sourceSets.main.runtimeClasspath
+
+}
+
+task( executeCompiler, dependsOn: jar, type: JavaExec ) {
+    if (project.hasProperty("InfFileName")) {
+        args = ["data/$InfFileName"]
+    }
+    main =  'compiler.InfinityCompiler'
+    classpath = sourceSets.main.runtimeClasspath
+
+}
+
+task( executeRuntime, dependsOn: jar, type: JavaExec ) {
+    if (project.hasProperty("byteCode")) {
+        args = ["data/$byteCode"]
+    }
+    main =  'runtime.Loader'
+    classpath = sourceSets.main.runtimeClasspath
+
+}
+
