@@ -1,4 +1,4 @@
-package compiler;// Generated from /Users/Pramod/Documents/SER502--Spring2017-Team2/src/infinity.g4 by ANTLR 4.7
+package compiler;
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -9,13 +9,13 @@ import java.util.Stack;
 
 
 /**
- * This class provides an empty implementation of {@link infinityListener},
+ * This class provides an empty implementation of {@link infiListener},
  * which can be extended to create a listener which only needs to handle a subset
  * of the available methods.
  */
 //Array list to store intermediate code.
 // stacks to store the line numbers so as to implement the jump conditions.
-public class infinityBaseListener implements infinityListener {
+public class infiBaseListener implements infiListener {
 
 
 	ArrayList<String> intermediate = new ArrayList<>();
@@ -33,18 +33,15 @@ public class infinityBaseListener implements infinityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-// we will parse through each and every token and based on that we will write the intermediate code.
-// at the entry and exit of every rule in the grammer based on the tokens we write the necessary intermediate code and push it into the array list.
-	// we are using the values in the stack to either print the line number to where the programs needs to jump.
-	// using the functionality of array list we are updating the jump statement with the correct line number at the time of parsing the tree.
-	@Override public void enterProgram(infinityParser.ProgramContext ctx) { }
+
+	@Override public void enterProgram(infiParser.ProgramContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
 	// push END at the end of the program.
-	@Override public void exitProgram(infinityParser.ProgramContext ctx) {
+	@Override public void exitProgram(infiParser.ProgramContext ctx) {
 
 		intermediate.add("END");
 
@@ -54,25 +51,25 @@ public class infinityBaseListener implements infinityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStatement(infinityParser.StatementContext ctx) { }
+	@Override public void enterStatement(infiParser.StatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStatement(infinityParser.StatementContext ctx) { }
+	@Override public void exitStatement(infiParser.StatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAssignment(infinityParser.AssignmentContext ctx) { }
+	@Override public void enterAssignment(infiParser.AssignmentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAssignment(infinityParser.AssignmentContext ctx) {
+	@Override public void exitAssignment(infiParser.AssignmentContext ctx) {
 
 
 		line_no++;
@@ -84,15 +81,12 @@ public class infinityBaseListener implements infinityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEquality(infinityParser.EqualityContext ctx) {
+	@Override public void enterEquality(infiParser.EqualityContext ctx) {
 
 		if(ctx.IDENTIFIER()!=null){
 			line_no++;
 			intermediate.add("PUSH "+ ctx.IDENTIFIER());
 		}
-
-
-
 
 	}
 	/**
@@ -100,7 +94,7 @@ public class infinityBaseListener implements infinityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEquality(infinityParser.EqualityContext ctx) {
+	@Override public void exitEquality(infiParser.EqualityContext ctx) {
 
 		if(ctx.GT() !=null )
 		{
@@ -140,17 +134,13 @@ public class infinityBaseListener implements infinityListener {
 		intermediate.add("TESTFGOTO ");
 
 
-
-
-
-
 	}
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLoop(infinityParser.LoopContext ctx) {
+	@Override public void enterLoop(infiParser.LoopContext ctx) {
 
 		while_cond.push(line_no);
 
@@ -162,7 +152,7 @@ public class infinityBaseListener implements infinityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLoop(infinityParser.LoopContext ctx) {
+	@Override public void exitLoop(infiParser.LoopContext ctx) {
 
 		line_no++;
 		intermediate.add("PUSH True");
@@ -180,13 +170,13 @@ public class infinityBaseListener implements infinityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVariable(infinityParser.VariableContext ctx) { }
+	@Override public void enterVariable(infiParser.VariableContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitVariable(infinityParser.VariableContext ctx) {
+	@Override public void exitVariable(infiParser.VariableContext ctx) {
 
 		line_no++;
 		intermediate.add("STORE " + ctx.IDENTIFIER());
@@ -199,13 +189,13 @@ public class infinityBaseListener implements infinityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCondition(infinityParser.ConditionContext ctx) { }
+	@Override public void enterCondition(infiParser.ConditionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCondition(infinityParser.ConditionContext ctx) {
+	@Override public void exitCondition(infiParser.ConditionContext ctx) {
 		int position = ifCond.pop();
 		String previous = intermediate.get(position - 1);
 		previous +=(line_no);
@@ -218,13 +208,13 @@ public class infinityBaseListener implements infinityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIfcondition(infinityParser.IfconditionContext ctx) { }
+	@Override public void enterIfcondition(infiParser.IfconditionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIfcondition(infinityParser.IfconditionContext ctx) {
+	@Override public void exitIfcondition(infiParser.IfconditionContext ctx) {
 
 		line_no++;
 		intermediate.add("PUSH True");
@@ -245,19 +235,19 @@ public class infinityBaseListener implements infinityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterElsecondition(infinityParser.ElseconditionContext ctx) { }
+	@Override public void enterElsecondition(infiParser.ElseconditionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitElsecondition(infinityParser.ElseconditionContext ctx) { }
+	@Override public void exitElsecondition(infiParser.ElseconditionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDisplay(infinityParser.DisplayContext ctx) {
+	@Override public void enterDisplay(infiParser.DisplayContext ctx) {
 		if(ctx.IDENTIFIER() != null) {
 			line_no++;
 			intermediate.add("PUSH " + ctx.IDENTIFIER());
@@ -268,7 +258,7 @@ public class infinityBaseListener implements infinityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDisplay(infinityParser.DisplayContext ctx) {
+	@Override public void exitDisplay(infiParser.DisplayContext ctx) {
 		line_no++;
 		intermediate.add("PRINT");
 
@@ -278,7 +268,7 @@ public class infinityBaseListener implements infinityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterRead(infinityParser.ReadContext ctx) {
+	@Override public void enterRead(infiParser.ReadContext ctx) {
 		line_no++;
 		intermediate.add("READ");
 	}
@@ -287,7 +277,7 @@ public class infinityBaseListener implements infinityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitRead(infinityParser.ReadContext ctx) {
+	@Override public void exitRead(infiParser.ReadContext ctx) {
 
 		line_no++;
 		intermediate.add("STORE " +ctx.IDENTIFIER());
@@ -297,7 +287,7 @@ public class infinityBaseListener implements infinityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpression(infinityParser.ExpressionContext ctx) {
+	@Override public void enterExpression(infiParser.ExpressionContext ctx) {
 
 		if(ctx.INTEGER()!=null){
 			line_no++;
@@ -318,7 +308,7 @@ public class infinityBaseListener implements infinityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpression(infinityParser.ExpressionContext ctx) {
+	@Override public void exitExpression(infiParser.ExpressionContext ctx) {
 		if(ctx.ADD() !=null )
 		{
 
@@ -368,13 +358,13 @@ public class infinityBaseListener implements infinityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterString(infinityParser.StringContext ctx) { }
+	@Override public void enterString(infiParser.StringContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitString(infinityParser.StringContext ctx) {
+	@Override public void exitString(infiParser.StringContext ctx) {
 
 		if(ctx.IDENTIFIER() != null) {
 			line_no++;
